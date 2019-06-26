@@ -11,7 +11,7 @@ namespace GuessNum
             RandNum();
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void input_num_KeyPress(object sender, KeyPressEventArgs e)
         {
             // 限制只能輸入數字
             // 使用 Char.IsDigit 方法 : 指示指定的 Unicode 字元是否分類為十進位數字。
@@ -31,7 +31,7 @@ namespace GuessNum
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void rule_btn_Click(object sender, EventArgs e)
         {
             // 規則
             MessageBox.Show("請輸入4個不重複數字，如果數字與位置和正確答案相同則會顯示A，" +
@@ -68,20 +68,21 @@ namespace GuessNum
 
         public void check()
         { 
-            int[] user = new int[4];// 使用者的數字
-            int a = 0;// 位置正確數
-            int b = 0;// 數字正確數
-            int tempnum = int.Parse(textBox1.Text);// 暫存使用者數字
+            int[] user_guess = new int[4];// 使用者的數字
+            //XAOB
+            int a = 0;// 位置正確數(A)
+            int b = 0;// 數字正確數(B)
+            int tempnum = int.Parse(input_num.Text);// 暫存使用者數字
             for(int i = 3;i >= 0;i--)
             {
                 // 轉成4個數字
-                user[i] = tempnum % 10;
+                user_guess[i] = tempnum % 10;
                 tempnum /= 10;                
             }
 
             for(int i = 0;i < 4;i++)
             {
-               if(ans[i] == user[i])// 檢查位置
+               if(ans[i] == user_guess[i])// 檢查位置
                 {
                     a++;
                 }
@@ -89,7 +90,7 @@ namespace GuessNum
                 {
                     for(int j = 0;j < 4;j++)
                     {
-                        if(ans[i] == user[j])// 檢查數字
+                        if(ans[i] == user_guess[j])// 檢查數字
                         {
                             b++;
                         }
@@ -97,8 +98,8 @@ namespace GuessNum
                 }
             }
 
-            label1.Text = a.ToString() + "A" + b.ToString() + "B";
-            listBox1.Items.Add(textBox1.Text + "  " + label1.Text);
+            guess_info.Text = a.ToString() + "A" + b.ToString() + "B";
+            Log_list.Items.Add(input_num.Text + "  " + guess_info.Text);
             if(a == 4)
             {
                 MessageBox.Show("恭喜答對!");
@@ -106,7 +107,7 @@ namespace GuessNum
 
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void input_num_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)// 按下enter
             {
@@ -114,16 +115,16 @@ namespace GuessNum
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Show_ans_btn_Click(object sender, EventArgs e)
         {
-            label3.Text = "";
+            Ans_label.Text = "";
             for (int i = 0; i < 4; i++)// 顯示答案
             {
-               label3.Text += ans[i].ToString();
+               Ans_label.Text += ans[i].ToString();
             }          
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Res_btn_Click(object sender, EventArgs e)
         {
             Application.Restart();
         }

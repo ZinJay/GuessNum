@@ -28,93 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.input_num = new System.Windows.Forms.TextBox();
+            this.guess_info = new System.Windows.Forms.Label();
+            this.rule_btn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.Ans_label = new System.Windows.Forms.Label();
+            this.Show_ans_btn = new System.Windows.Forms.Button();
+            this.Log_list = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Res_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // input_num
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 49);
-            this.textBox1.MaxLength = 4;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ShortcutsEnabled = false;
-            this.textBox1.Size = new System.Drawing.Size(105, 22);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.input_num.Location = new System.Drawing.Point(16, 61);
+            this.input_num.Margin = new System.Windows.Forms.Padding(4);
+            this.input_num.MaxLength = 4;
+            this.input_num.Name = "input_num";
+            this.input_num.ShortcutsEnabled = false;
+            this.input_num.Size = new System.Drawing.Size(139, 25);
+            this.input_num.TabIndex = 0;
+            this.input_num.KeyDown += new System.Windows.Forms.KeyEventHandler(this.input_num_KeyDown);
+            this.input_num.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.input_num_KeyPress);
             // 
-            // label1
+            // guess_info
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(162, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 24);
-            this.label1.TabIndex = 1;
+            this.guess_info.AutoSize = true;
+            this.guess_info.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.guess_info.Location = new System.Drawing.Point(216, 59);
+            this.guess_info.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.guess_info.Name = "guess_info";
+            this.guess_info.Size = new System.Drawing.Size(0, 30);
+            this.guess_info.TabIndex = 1;
             // 
-            // button1
+            // rule_btn
             // 
-            this.button1.Location = new System.Drawing.Point(12, 78);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 31);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "規則";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.rule_btn.Location = new System.Drawing.Point(16, 98);
+            this.rule_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.rule_btn.Name = "rule_btn";
+            this.rule_btn.Size = new System.Drawing.Size(113, 39);
+            this.rule_btn.TabIndex = 2;
+            this.rule_btn.Text = "規則";
+            this.rule_btn.UseVisualStyleBackColor = true;
+            this.rule_btn.Click += new System.EventHandler(this.rule_btn_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(16, 249);
+            this.label2.Location = new System.Drawing.Point(21, 311);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 24);
+            this.label2.Size = new System.Drawing.Size(104, 30);
             this.label2.TabIndex = 3;
             this.label2.Text = "Answer:";
             // 
-            // label3
+            // Ans_label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(103, 249);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 24);
-            this.label3.TabIndex = 4;
+            this.Ans_label.AutoSize = true;
+            this.Ans_label.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Ans_label.Location = new System.Drawing.Point(137, 311);
+            this.Ans_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Ans_label.Name = "Ans_label";
+            this.Ans_label.Size = new System.Drawing.Size(0, 30);
+            this.Ans_label.TabIndex = 4;
             // 
-            // button2
+            // Show_ans_btn
             // 
-            this.button2.Location = new System.Drawing.Point(12, 210);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 36);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "顯示答案";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Show_ans_btn.Location = new System.Drawing.Point(16, 262);
+            this.Show_ans_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.Show_ans_btn.Name = "Show_ans_btn";
+            this.Show_ans_btn.Size = new System.Drawing.Size(113, 45);
+            this.Show_ans_btn.TabIndex = 5;
+            this.Show_ans_btn.Text = "顯示答案";
+            this.Show_ans_btn.UseVisualStyleBackColor = true;
+            this.Show_ans_btn.Click += new System.EventHandler(this.Show_ans_btn_Click);
             // 
-            // listBox1
+            // Log_list
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(166, 110);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(97, 136);
-            this.listBox1.TabIndex = 6;
+            this.Log_list.FormattingEnabled = true;
+            this.Log_list.ItemHeight = 15;
+            this.Log_list.Location = new System.Drawing.Point(221, 138);
+            this.Log_list.Margin = new System.Windows.Forms.Padding(4);
+            this.Log_list.Name = "Log_list";
+            this.Log_list.Size = new System.Drawing.Size(128, 169);
+            this.Log_list.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(9, 29);
+            this.label4.Location = new System.Drawing.Point(12, 36);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 17);
+            this.label4.Size = new System.Drawing.Size(82, 22);
             this.label4.TabIndex = 7;
             this.label4.Text = "輸入數字:";
             // 
@@ -122,38 +130,41 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(163, 92);
+            this.label5.Location = new System.Drawing.Point(217, 115);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 17);
+            this.label5.Size = new System.Drawing.Size(78, 22);
             this.label5.TabIndex = 8;
             this.label5.Text = "您的紀錄";
             // 
-            // button3
+            // Res_btn
             // 
-            this.button3.Location = new System.Drawing.Point(12, 141);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 33);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "重新開始";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Res_btn.Location = new System.Drawing.Point(16, 176);
+            this.Res_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.Res_btn.Name = "Res_btn";
+            this.Res_btn.Size = new System.Drawing.Size(113, 41);
+            this.Res_btn.TabIndex = 9;
+            this.Res_btn.Text = "重新開始";
+            this.Res_btn.UseVisualStyleBackColor = true;
+            this.Res_btn.Click += new System.EventHandler(this.Res_btn_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 311);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(377, 389);
+            this.Controls.Add(this.Res_btn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Log_list);
+            this.Controls.Add(this.Show_ans_btn);
+            this.Controls.Add(this.Ans_label);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.rule_btn);
+            this.Controls.Add(this.guess_info);
+            this.Controls.Add(this.input_num);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -165,16 +176,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox input_num;
+        private System.Windows.Forms.Label guess_info;
+        private System.Windows.Forms.Button rule_btn;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label Ans_label;
+        private System.Windows.Forms.Button Show_ans_btn;
+        private System.Windows.Forms.ListBox Log_list;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Res_btn;
     }
 }
 
